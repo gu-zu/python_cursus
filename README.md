@@ -1,5 +1,5 @@
 # python cursus
-## repository voor de uitwerkingen van de opdrachten van de python cursus van meneer Goes in V6
-opdrachten hebben de naam opdr[x].py
+## repository for python course at Het College Weert in V6
+Excercise are named in the form opdr[x].py
 
-De cursus als MS word bestand is ook aanwezig en bevat de opdrachten
+The course as MS word file is present in the root and includes the excercises.
