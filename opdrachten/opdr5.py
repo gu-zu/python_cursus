@@ -11,4 +11,4 @@ print(nr3 / (nr1 % nr2))  # 5 / 2
 nr1 = nr1 + 1  # 7
 print(nr3 / (nr1 % nr2))  # 5 / 3
 nr1 = nr1 + 1  # 8
-print(nr3 / (nr1 % nr2))  # 5 / 0 (8%4=0)
+print(nr3 / (nr1 % nr2))  # 5 / 0 (8%4=0) geeft divide by 0 error
