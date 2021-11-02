@@ -1,0 +1,202 @@
+Python cursus Guus Zuijdgeest - V6 - 2021-2022
+
+
+Opdracht 1:
+    print("7/4 = ")
+    print(7/4)
+    
+
+Opdracht 2:
+    print("7/4 = ", 7 / 4)
+    
+
+Opdracht 3:
+    prijs = 24.95
+    inkoop = prijs * 0.6
+    verzending = 0.75  # 3 voor eerste
+    winst = prijs - inkoop - verzending
+    verkocht = 60
+    
+    print(winst * verkocht - (3 - verzending))
+    
+
+Opdracht 4:
+    uur = 14 + 318
+    min = 30
+    uuropdag = uur % 24
+    print(uuropdag, ":", min)
+    
+
+Opdracht 5:
+    # comments gebasseerd op originele waarden voor nr 1 en nr 2:
+    # nr1=5
+    # nr2=4
+    
+    nr1 = 11
+    nr2 = 10
+    nr3 = 5
+    print(nr3 / (nr1 % nr2))  # 5 / 1
+    nr1 = nr1 + 1  # 6
+    print(nr3 / (nr1 % nr2))  # 5 / 2
+    nr1 = nr1 + 1  # 7
+    print(nr3 / (nr1 % nr2))  # 5 / 3
+    nr1 = nr1 + 1  # 8
+    print(nr3 / (nr1 % nr2))  # 5 / 0 (8%4=0) geeft divide by 0 error
+    
+
+Opdracht 6:
+    # Origineel deel:
+    a = 17
+    b = 23
+    print("a =", a, "en b =", b)
+    a += b
+    
+    # mijn deel
+    # a=40, b=23
+    # a wordt 23 b wordt 17
+    b = a - b  # 17
+    a -= b  # 23
+    
+    print("nu heeft a de waarde", a, "en b =", b)
+    
+
+Opdracht 7:
+    getal1 = int(input("Voer het eerste getal in "))
+    getal2 = int(input("Voer het tweede getal in "))
+    print(
+        "De som van deze getallen is ",
+        (getal1 + getal2),
+        ", en het verschil is ",
+        abs(getal1 - getal2),
+    )
+    
+
+Opdracht 8:
+    print("X", "X", "X", sep="x")  # print de 3 ingegeven "X" waarden met de separator "x"
+    print("X", end="")  # end="" overruled de standaard newline aan het einde,
+    print("Y", end="")  # waardoor een volgende print() op dezelfde regel terecht komt
+    print("Z")
+    
+
+Opdracht 9:
+    getal1 = int(input("Voer het eerste getal in "))
+    getal2 = int(input("Voer het tweede getal in "))
+    getal3 = int(input("Voer het derde getal in "))
+    
+    print(
+        "het grootste getal is",
+        max(getal1, getal2, getal3),
+        ", de klienste",
+        min(getal1, getal2, getal3),
+        "en het gemiddelde is",
+        (getal1 + getal2 + getal3) / 3,
+    )
+    
+
+Opdracht 10:
+    from math import sqrt
+    
+    zijde1 = int(input("Voer de lengte van de eerste zijde in "))
+    zijde2 = int(input("Voer de lengte van de tweede zijde in "))
+    
+    
+    def sqr(getal):
+        return getal * getal
+    
+    
+    def pythagoras(zijde1, zijde2):
+        return sqrt(sqr(zijde1) + sqr(zijde2))
+    
+    
+    print("Lengte van de schuine zijde is", pythagoras(zijde1, zijde2))
+    
+
+Opdracht 11:
+    print("1. ", 2 < 5)  # true 2 is minder dan 5
+    print("2. ", 2 <= 5)  # true
+    print("3. ", 3 > 3)  # false; gelijk aan != meer dan
+    print("4. ", 3 >= 3)  # true
+    print("5. ", 3 == 3.0)  # true
+    print("6. ", 3 == "3")  # string en int zijn niet gelijk
+    print("7. ", "syntax" == "syntax")  # true
+    print("8. ", "syntax" == "semantiek")  # false; andere string
+    print("9. ", "syntax" == " syntax")  # false; spatie telt ook mee
+    print("10. ", "Python" != "rommel")  # true
+    print("11. ", "Python" > "Perl")  # true
+    print("12. ", "banaan" < "mango")  # true
+    print("13. ", "banaan" < "Mango")  # false
+    
+
+Opdracht 12:
+    print("y" in "Python")  # true; y zit in Python
+    print("x" in "Python")  # false; x zit niet in Python
+    print("p" in "Python")  # false; hoofdletter is geen kleine letter
+    print("th" in "Python")  # true
+    print("to" in "Python")  # false; andere volgorde
+    print("y" not in "Python")  # false
+    
+
+Opdracht 13:
+    getal = int(input("Voer een getal in "))
+    print("Getal", getal, "is ", end="")
+    if getal % 2 == 0:
+        print("even")
+    else:
+        print("oneven")
+    
+
+Opdracht 14:
+    lengte = float(input("Voer je lengte in(meters) "))
+    gewicht = float(input("Voer je gewicht in(kilo's) "))
+    
+    # nieuwe formule:
+    bmi = round((gewicht * 1.3) / (pow(lengte, 2.5)), 1)
+    
+    print("Je BMI is", bmi, ", dat betekent dat je ", end="")
+    if bmi < 18:
+        print("ondergewicht hebt")
+    elif bmi < 25:
+        print("gezond bent")
+    elif bmi < 30:
+        print("overgewicht hebt")
+    elif bmi < 40:
+        print("obesitas hebt")
+    else:
+        print("een zwart gat bent geloof ik")
+    
+
+Opdracht 15:
+    a = float(input("Geef de waarde van a "))
+    b = float(input("Geef de waarde van b "))
+    c = float(input("Geef de waarde van c "))
+    
+    d = b * b - 4 * a * c
+    print("De discriminant is ", b, "^2 - 4 * ", a, " * ", c, " = ", d, sep="")
+    # minder dan nul is geen uiktkomsten, 0 is 1 uitkomst meer dan nul is meer uitkomsten
+    if d < 0:
+        print("Geen uitkomsten")
+    elif d == 0:
+        print("1 uitkomst")
+    else:
+        print("Meerdere uitkomsten")
+    
+
+Opdracht 16:
+    getal = int(input("Geef een getal "))
+    
+    print(getal, end="")
+    while getal > 0:
+        getal -= 1
+        print(",", getal, sep="", end="")
+    
+    print()
+    
+
+Opdracht 17:
+    for cijfer in (8, 7.5, 9, 6, 6, 6, 5.5, 7, 8, 7, 7.5):
+        if cijfer < 5.5:
+            print("leerling is gezakt ")
+            break
+    else:
+        print("leerling is geslaagd")
+    
